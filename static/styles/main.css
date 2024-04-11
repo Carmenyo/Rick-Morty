@@ -1,5 +1,7 @@
 body{
-    border: red solid 1px;
+    width: 100%;
+    height: 100vh;
+    /* border: red solid 1px; */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,20 +10,30 @@ body{
     
 }
 .logo{
-    border: red solid 1px;
+    /* border: red solid 1px; */
     margin: 0 auto;
     display: block;
+    margin-bottom: 1rem;
+}
+.navigation{
+    border: solid 1px red;
+        transform: rotate(90deg);
+
 }
 
 .wrapper{
-    border: red solid 1px;
+    /* border: red solid 1px; */
     width: 100%;
     max-width: 1288px;
     margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .character{
     align-items: center;
-    border: rgb(195, 255, 0) solid 1px;
+    /* border: rgb(195, 255, 0) solid 1px; */
     width: 100%;
     display: flex;
     align-items: center;
@@ -29,30 +41,77 @@ body{
 }
 
 .character-image{
-    width: 100%;
+    width: 80%;
     border: solid 3px greenyellow;
+    border-radius: 50%;
+
 
 }
 
 
 .character-labels{
-    border: solid 3px greenyellow;
+    /* border: solid 3px greenyellow; */
     align-items: center;
-    
- 
 }
 
 .character-name{
     font-size: 2rem;
     text-align: center;
-    border: red solid 1px;
+    /* border: red solid 1px; */
+    text-transform: uppercase;
 }
 .character-label{
-    border: red solid 1px;
+    /* border: red solid 1px; */
     text-align: center;
     background-color:#685128 ;
     padding: 1rem;
     color: white;
     border-radius: 1rem;
-    display: inline-flex;
+    display: column;
+    text-align: left;
+}
+@media screen and (min-width:1440px) {
+    .wrapper{
+        border: solid 1px red;
+    }
+
+  
+    .character-name {
+        grid-area: name;
+        font-size: 3rem;
+       text-align: left;
+       position: relative;
+       display: inline-flex;
+       width: 25rem;
+       height: 50px;
+    }
+.character-name::after{
+    content: "";
+    width: 90px;
+    height: 6px;
+    background-color: red;
+    position: absolute;
+    left: 90%;
+    top: 50%;
+}
+    .character-grid{
+        width: 90%;
+        border: 2px rgb(255, 0, 166) solid;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "name image" "labels image"  ;
+    }
+    .character-image{
+        width: 80%;
+        grid-area: "image";
+    }  
+    .character-labels{
+        border: red solid 1px;
+        grid-area: labels;
+        max-width: 400px;
+        margin-top: -18rem;
+
+    }
+
+
 }
