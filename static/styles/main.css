@@ -17,7 +17,21 @@ body{
 }
 .navigation{
     border: solid 1px red;
-        transform: rotate(90deg);
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    position: absolute;
+    left: 4em;
+    width: 100vh;
+    bottom: 0;
+    text-align: center;
+}
+.dot{
+    display: inline-flex;
+    border: solid red 1px;
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
 
 }
 
@@ -48,7 +62,6 @@ body{
 
 }
 
-
 .character-labels{
     /* border: solid 3px greenyellow; */
     align-items: center;
@@ -72,10 +85,9 @@ body{
 }
 @media screen and (min-width:1440px) {
     .wrapper{
-        border: solid 1px red;
+        /* border: solid 1px red; */
     }
 
-  
     .character-name {
         grid-area: name;
         font-size: 3rem;
